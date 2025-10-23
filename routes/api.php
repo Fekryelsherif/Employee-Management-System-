@@ -496,10 +496,10 @@ Route::middleware('auth:sanctum')->group(function () {
 
 
 
-use Illuminate\Support\Facades\Artisan;
+// use Illuminate\Support\Facades\Artisan;
 
-Route::get('/run-seeder', function () {
-    Artisan::call('migrate', ['--force' => true]);
-    Artisan::call('db:seed', ['--force' => true]);
-    return response()->json(['message' => 'Seeder executed successfully!']);
-});
+// Route::get('/run-seeder', function () {
+//     Artisan::call('migrate', ['--force' => true]);
+//     Artisan::call('db:seed', ['--force' => true]);
+//     return response()->json(['message' => 'Seeder executed successfully!']);
+// });
