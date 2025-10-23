@@ -493,3 +493,12 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::put('/profile', [ProfileController::class, 'update']);
     Route::delete('/profile', [ProfileController::class, 'destroy']);
 });
+
+
+
+use Illuminate\Support\Facades\Artisan;
+
+Route::get('/run-seeder', function () {
+    Artisan::call('migrate:fresh --seed --force');
+    return response()->json(['message' => '✅ Seeder executed successfully!']);
+});
